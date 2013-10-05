@@ -1,0 +1,2200 @@
+/*!
+ * Gravity Framework v1.0
+ * Copyright 2013 Themesgravity
+ * 
+ * Anchorra - Multipurpose responsive Html Template
+ */
+ 
+ /* ==========================================================================
+    Importing Required Css Files
+  ========================================================================== */
+  
+
+
+ @import url('bootstrap.min.css');
+ @import url('bootstrap-responsive.min.css');
+ @import url('shortcodes.css');
+ 
+ /***
+	Index
+	=================
+	1. General Fixes
+	2. Main Styles
+		2.1. Heading Styles
+		2.2. Styles for the boxed layout
+		2.3. Custom Columns
+	3. Typography
+		3.1. Heading Styles
+		3.2. Pullquote Styling
+		3.3. Dropcap Styling
+		3.4  List Styling
+	4. Header Styles
+		4.1. Logo Styles
+		4.2. Navigation Styles
+		4.3. Updates
+		4.4  Mobile Navigation(responsive) styling
+		4.5  Page Heading Styles
+		4.6  Page Heading for Portfolio Item Page
+	5. Content Area Styles
+		5.1. Sidebar Core Styles
+		5.2. Content Box Core Styles
+	6. Footer Styles
+		6.1. Subscribe-box Styles
+		6.2. Inner Black Footer Styles
+		6.3. Footer Social Media
+		6.4. Custom Footer Menu Widget
+		6.5. Recent Posts footer Menu
+		6.6. Footer Subscribe Widget
+	7. Sidebar Widgets
+		7.1. Download Widget
+		7.2. Twitter Widget
+		7.3. Sidebar Menu Widget
+		7.4. Search Widget
+		7.5. Recent Posts Widget 
+		7.6. Recent Projects Widget
+		7.7. Contact Widget
+		7.8. Info Box Widget
+		7.9. Text Widget
+	8. Shortcodes Styles
+		8.1. Medium Buttons Block
+		8.2. Small Buttons Block
+		8.3. cta-buttons block
+	9. Portfolio Single Styles
+	10. Portfolio Single Full Page Styles
+	11. Blog Listing  Styles
+	12. Blog Pagination Styles
+	13. Blog Listing Alternative Styles
+	14. Gallery Styles
+	15. Single Post Styles
+		15.1. Author Styles
+		15.2. Comment Styles
+	16. Comment Reply Styles
+	17. Home v1 Styles
+		17.1. HOME v1 SLIDER STYLES
+	18. Home v2 Styles
+	19. Contact Page Styles
+	20. Contact Form Styles
+	20. Service Styles
+	21. Media Queries
+	=================
+***/
+
+  
+  /* ==========================================================================
+     1. General Fixes
+   ========================================================================== */
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+.transparent-border{
+ border-bottom: 1px solid transparent!important; /* This Fix is use for the Dropdown Menu */ 
+}
+
+
+
+/*The following code is a fix for the wrapper region which contains sidebar and content bar what is done here is the width
+of the container inside the wrapper element is increased by a 100px so as to add a padding of 50px on each side this way
+the responsivity of the container is maintained and it does not break.*/
+
+
+
+#wrapper > .container{ background:#ffffff;}
+
+@media (min-width: 1200px){ #wrapper .container{ width: 1270px; } }
+
+@media (max-width: 1199px) and (min-width:768px){ #wrapper .container{ width: 1040px; } }
+
+@media (max-width: 979px) and (min-width: 768px){ #wrapper .container{ width:824px; background:#ffffff;} }
+
+
+.sidebar-fix { /*FIX FOR THE SIDEBAR THE ROW BEFORE ASIDE#sidebar SHOULD ALWAYS HAVE THIS WITH IT*/
+	overflow: hidden;
+}
+
+
+/* ==========================================================================
+   2. Main Styles
+ ========================================================================== */
+ 
+   
+body {
+   font:       16px/1.5 Arial, Helvetica, sans-serif;
+   word-wrap:  break-word;
+   word-break: break-word;
+   color:      #565353;
+   background: #ecebe9;
+   overflow-x: hidden;
+   -webkit-font-smoothing: antialiased;
+}
+::selection {
+	background: #323e4e;
+	color:      #ffffff;
+}
+::-moz-selection {
+	background: #323e4e;
+	color:      #ffffff;
+}
+.clear {
+   clear: both;
+}
+.black {
+	color: #000000;
+}
+button {
+	border: 0px;
+}
+p {
+	margin: 0 0 20px; 
+}
+.small-text {
+	color:     #6a7d87;
+	font-size: 0.875em;
+}
+a {
+	color: 			 inherit;
+	text-decoration: none;
+}
+a:hover{
+	color: #de3a31;
+	text-decoration: none;
+}
+.red {
+	color: #de3a31;
+}
+img.pull-left{
+	margin: 0 30px 25px 0; 
+}
+img.pull-right{
+	margin: 0 0 25px 30px; 
+}
+
+/* 2.1 Heading Styles */
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight:   400;
+	margin-bottom: 0;
+	color:         black;
+	margin-top:    0px;
+}
+h1 {
+	font-size:   2.188em;
+	line-height: 45px;
+}
+h2 {
+	font-size:   1.813em;
+	line-height: 35px;
+}
+h3 {
+	font-size:   1.500em;
+	line-height: 32px;
+}
+h4 {
+	font-size:   1.250em;
+	line-height: 28px;
+}
+h5 {
+	font-size:      1.063em;
+	line-height:    24px;
+	text-transform: uppercase;
+}
+h6 {
+	font-size:   1.125em;
+	line-height: 24px;
+	font-weight: 700;
+}
+
+
+/* 2.2 Styles for the boxed layout */
+
+.box-padding-left {
+	padding-left:       50px;
+	box-sizing:         content-box;
+	-o-box-sizing:      content-box;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing:    content-box;
+}
+
+.box-padding-right {
+	padding-right:      50px;
+	box-sizing:         content-box;
+	-o-box-sizing:      content-box;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing:    content-box;
+}
+
+.box-padding-both {
+	padding:            0 50px 0 50px;
+	box-sizing:         content-box;
+	-o-box-sizing:      content-box;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing:    content-box;
+}
+
+
+/* 2.3 Custom Columns */
+
+.col1 {
+	max-width: 70px;
+}
+.col2 {
+	max-width: 170px;
+}
+.col3 {
+	max-width: 270px;
+}
+.col4 {
+	max-width: 370px;
+}
+.col5 {
+	max-width: 470px;
+}
+.col6 {
+	max-width: 570px;
+}
+.col7 {
+	max-width: 670px;
+}
+.col8 {
+	max-width: 770px;
+}
+.col9 {
+	max-width: 870px;
+}
+.col10 {
+	max-width: 970px;
+}
+.col11 {
+	max-width: 1070px;
+}
+.col12 {
+	max-width: 1170px;
+}
+
+
+/* ==========================================================================
+    3. Typography
+ ========================================================================== */
+
+/* 3.1 Blockquote Styling*/
+
+blockquote {
+	padding:       30px 50px 20px 100px;
+	background:    #f7f7f7 url('../img/blockquote-icon.png') no-repeat 26px 33px;
+	border:        0px;
+	margin-top:    20px;
+	margin-bottom: 20px;
+}
+cite {
+	font-size:  15px;
+	font-style: normal;
+	display:    block;
+	margin-top: 20px;
+	color:      #bab1b1;
+}
+
+/* 3.2 Pullquote Styling */
+
+.pullquote {
+	text-align:    right;
+	font-size:     1.225em;
+	padding-right: 30px;
+	margin-right:  30px;
+	margin-bottom: 20px;
+	border-right:  2px solid #323e4e;
+	float:         left;
+	max-width:     400px;
+	color:         #242323; 
+}
+
+/* 3.3  Dropcap Style */
+
+.dropcap {
+	font-size:      100px;
+	font-weight:    700;
+	text-transform: uppercase;
+	display:        inline-block;
+	float:          left;
+	line-height:    1;
+	padding-right:  32px;
+	color:          #d3d3d3;
+}
+
+/* 3.4 List Styling */
+
+#content li {
+	line-height: 1.5;
+}
+#content ul {
+	margin-left: 0px;
+}
+ul.arrow li {
+	background:   url('../img/ul-list.png') left 5px no-repeat;
+	padding-left: 1.6em;
+	list-style:   none;
+}
+   
+/* ==========================================================================
+   4. Header Styles
+ ========================================================================== */
+
+
+#top-header {
+	background: #dfdfdf;	
+}
+.header-container {
+	/*background:    #323e4e;*/
+	min-height:    100px; /*Adjust the height of the header here*/
+	/*border-bottom: 4px solid #bed4df;*/
+
+	background-color: #cb1a2a;
+	background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.28));
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.28)));
+	background-position: bottom center;
+	background-repeat: repeat-x;
+	border-bottom: 6px solid #dfbd00;
+}
+
+
+/* 4.1 Logo Styles ( div.logo > img > a)
+  ==========================*/
+
+.logo {
+	margin-top: 50px;
+}
+.logo a {
+	display: inline-block;
+}
+
+/* 4.2 Navigation Styles
+==========================*/
+
+/* Initialisation */
+
+#navigation {
+	margin-top: 0px;
+}
+#navigation ul, #navigation li {
+	list-style: none;
+	padding:    0;
+	margin:     0;
+	display:    inline;
+}
+#navigation ul li:hover>ul {
+	opacity:  1; 
+	position: absolute;
+	top:      99%;
+	left:     0;
+}
+#navigation ul ul li:hover>ul { 
+	position: absolute;
+	top:      0;
+	left:     100%; 
+	opacity:  1; 
+	z-index:  777;  
+	border:   0;
+}
+
+/* First Level */
+
+#navigation ul li{
+	float:        left;
+	position:     relative;
+}
+#navigation ul li a { 
+	font-size:       20px;
+	color:           white;
+	display:         inline-block;
+	width: 110px;
+	line-height: 100px;
+	text-align: center;
+}
+#navigation ul li:hover > a {
+	color: white;
+	background-color: #cb1a2a;
+}
+
+.nav-active 
+{
+	background-color: #cb1a2a;
+}
+
+#navigation .nav-top-icon {
+	position: absolute;
+	top:      31px;
+	z-index:  1000000;
+	left:     17px;
+	color:    white;
+}
+#navigation .nav-right-icon {
+	position: absolute;
+	z-index:  1000;
+	color:    #bed4df;
+	right:    25px;
+	top:      16px;
+}
+
+/* Second Level */
+
+#navigation ul ul {
+	opacity:     0; 
+	margin:      0px 0 0 30px;
+  	filter:      alpha(opacity=0); 
+	position:    absolute;
+	top:         -99999px; 
+	left:        0;
+	padding-top: 55px; /*Adjust this value to adjust the top distance of the dropdown menu*/
+	z-index:     999;
+}
+#navigation ul ul li {
+	padding:     0px; 
+	cursor:      pointer;
+	background-color: #990000;
+}
+#navigation ul ul li a {
+	border-bottom: 1px solid white;
+}
+#navigation ul ul li:last-child a{
+	border-bottom: 1px solid transparent;
+}
+#navigation ul ul li a {
+	padding: 12px 0;
+	display: block;
+	width:   200px;
+	margin:  0 20px;
+}
+#navigation ul ul li:hover {
+	background: #cc0000;
+}
+#navigation ul ul li:hover a {
+	color: #ffffff;
+}
+
+/* Third Level */
+
+#navigation ul ul ul { 
+	position:    absolute; 
+	top:         -99999px; 
+	left:        100%; 
+	opacity:     0;
+	margin:      0 0 0 0;
+	z-index:     999;
+	padding-top: 0px;
+	background:  #3d4d62;
+}
+#navigation ul ul ul li{
+	background: #3d4d62;
+}
+#navigation ul ul ul li a { 
+	 color: #afbbc1!important;
+}
+#navigation ul ul ul li:hover a { 
+	 color: #ffffff!important;
+}
+
+/* IE Dropdown Fix
+==========================*/
+.ie7 .ie-dropdown-fix {position: relative; z-index: 5;}
+.ie8 .ie-dropdown-fix {position: relative; z-index: 5;}
+
+
+/* 4.4 Mobile Navigation(responsive) styling
+==========================*/
+
+a.nav-toggle {
+	color:          #ffffff;
+	font-size:      26px;
+	padding:        10px 18px 8px 18px;
+	display:        none;
+	cursor:         pointer;
+	position:       relative;
+	top:            25px; /* Adjust this value if the toggle is not aligning with the logo correctly */
+	-webkit-border-radius: 5px;
+	-moz-border-radius:    5px;
+	border-radius:  5px;
+	text-decoration: none;
+
+	background-color: #cb1a2a;
+	background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.1)));
+	background-position: bottom center;
+	background-repeat: repeat-x;
+}
+a.nav-toggle:hover {
+	background:      #cb1a2a;
+	text-decoration: none;
+}
+#mobile-navigation {
+	display:       none;
+	margin-top: 100px;
+	margin-bottom: 30px;
+}
+#mobile-navigation i {
+	display: none;
+}
+#mobile-navigation ul li a {
+	font-size:       1em;
+	font-weight:     700;
+	color:           white;
+	text-decoration: none;
+	display:         inline-block;
+}
+#mobile-navigation ul li a:hover,#mobile-navigation ul li a:active {
+	background: #990000;
+	color:      #ffffff;
+}
+#mobile-navigation ul {
+	padding:    0px;
+	margin:     0px;
+	list-style: none;
+}
+#mobile-navigation > ul > li > ul > li a {
+	padding-left: 25px;
+}
+#mobile-navigation > ul > li > ul > li > ul > li a {
+	padding-left: 40px;
+}
+#mobile-navigation ul li a {
+	padding:       12px 0px 12px 4px;
+	border-bottom: 1px solid white;
+	display:       block;
+}
+ 
+/* 4.5 Page Heading Styles
+==========================*/
+#title
+{
+	color: white;
+	position: absolute;
+	margin-top: -70px;
+	font-size: 72px;
+	font-family: helvetica, arial, sans-serif;
+}
+
+.page-heading-container {
+	background: #bed4df;
+	color:      #ffffff;
+	min-height: 6.000em;
+	position:   relative;
+}
+.page-heading-container p.title {
+	font-size: 1.2em;
+	margin:    1.7em 0 0 0;
+	max-width: 960px;
+}
+.page-heading-container p.social-title {
+	font-size:   1.35em;
+	margin:      1.4em 0 0 0;
+	font-weight: 700;
+}
+.page-heading-container .top-social {
+	cursor:      default;
+	margin-left: 30px;
+}
+.page-heading-container .top-social a {
+	color:           #ffffff;
+	text-decoration: none;
+	font-size:       2.000em;
+	line-height:     96px;
+	margin-left:     30px;
+}
+.page-heading-container .top-social a:first-child {
+	margin-left: 0px;
+}
+.page-heading-container .top-social a:hover {
+	color: #323e4e;
+}
+.page-heading-container i.icon-caret-down {
+	color: #bed4df;
+	position: absolute;
+	font-size: 54px;
+	top: 73px;
+	left: 345px;
+}
+
+/* 4.6 Page Heading for Portfolio Item Page */
+
+.page-heading-container p.portfolio-title {
+	font-size: 1.625em;
+	margin:    1.1em 0 0 0;
+	display:   inline-block;
+}
+.page-heading-container .portfolio-controls {
+	display:     inline-block;
+	position:    relative;
+	top:         4px;
+	margin-left: 20px;
+	cursor:      default;
+}
+.page-heading-container .portfolio-controls a {
+	color:           #ffffff;
+	font-size:       30px;
+	text-decoration: none;
+}
+.page-heading-container .portfolio-controls a:first-child {
+	margin-right: 15px;
+}
+.page-heading-container .portfolio-controls a:hover {
+	text-decoration: none;
+	color:           #1e1e1e;
+}
+.category-dropdown {
+	position: relative;
+}
+.category-dropdown ul {
+	display:    none;
+	position:   absolute;
+	top:        70px;
+	width:      100%;
+	left:       -25px;
+	list-style: none;
+	background: #92adbb;
+	z-index:    10000;
+}
+.category-dropdown ul li {
+	position: relative;
+}
+.category-dropdown ul li a {
+	padding:         10px 16px;
+	display:         block;
+	color:           #ffffff;
+	text-decoration: none;
+}
+.category-dropdown ul li a:hover {
+	background: #98b4c2;
+}
+.category-dropdown a.category-toggle {
+	cursor:      pointer;
+	color:       #ffffff;
+	font-size:   1.188em;
+	line-height: 96px;
+	background:  #92adbb;
+	padding:     10px 0px 10px 16px;
+	text-decoration: none;
+}
+.category-dropdown a.category-toggle i {
+	padding-left: 35px;
+	position:     relative;
+	left:         -14px;
+	top:          -1px;
+	font-size:    13px;
+}
+.category-dropdown a.category-toggle:hover {
+	text-decoration: none;
+	background: 	 #859eab;
+}
+
+
+
+/* ==========================================================================
+   5. Content Area Styles
+ ========================================================================== */
+
+
+/* 5.1 Sidebar Core Styles
+==========================*/
+
+#sidebar {
+	background:     #f7f7f7;
+	margin-bottom:  -9999px;
+	padding-bottom: 9999px;
+}
+
+/* 5.2 Content Box Core Styles
+==========================*/
+
+#content {
+	background:     #ffffff;
+	padding-top:    60px;
+	padding-bottom: 40px;
+}
+
+#content-home {
+	background:     #ffffff;
+	padding-top:    20px;
+	padding-bottom: 40px;
+}
+
+/* ==========================================================================
+   6. Footer Styles
+ ========================================================================== */
+
+#main-footer {
+	background:     #dfdfdf;
+	padding-bottom: 90px;
+}
+
+/* 6.1 Subscribe-box Styles */
+
+.subscribe-box {
+	background:     #ecebe9;
+	padding-top:    32px;
+	padding-bottom: 32px;
+}
+.subscribe-box h3{
+	margin-bottom: 0px;
+	margin-top:    9px;
+	color:         #2d2d2d;
+}
+
+h3.subscribe-box-submit {
+	color:   #2aa117;
+	display: none;
+}
+.subscribe-box form{
+	margin: 0px;
+}
+.subscribe-box form input,.subscribe-box form button{
+	margin-left: 25px;
+}
+.subscribe-box form input {
+	height:        50px;
+	border-radius: 0px;
+	background:    #ffffff;
+	border:        0px;
+	color:         #d3d2cf!important;
+	padding-left:  19px;
+	padding-right: 20px;
+	box-shadow:    none!important;
+	max-width:     250px;
+	width: 250px;
+	
+}
+
+.subscribe-box form input:first-child {
+	margin-left: 0px;
+}
+
+/* 6.2 Inner Black Footer Styles */
+
+.inner-footer {
+	background:     #2d3032;
+	padding-top:    45px;
+	padding-bottom: 30px;
+	font-size:      15px;
+}
+.inner-footer h5 {
+	color:          #ffffff;
+	text-transform: uppercase;
+	font-size:      15px;
+	font-weight:    700;
+}
+.inner-footer p {
+	color: #6a7d87;
+}
+
+/* 6.3 Footer Social Media
+==========================*/
+
+.footer-social{
+	cursor: default;
+}
+.footer-social a{
+	font-size:    26px;
+	color:        #ffffff;
+	margin-right: 13px;
+	color:        #606568;
+	text-decoration: none; 
+}
+.footer-social a:hover{
+	text-decoration: none;
+	color:           #bed4df;
+}
+
+/* 6.4 Custom Footer Menu Widget
+==========================*/
+
+ul.custom-footer-menu {
+	list-style:  none;
+	margin-left: 0px;
+}
+ul.custom-footer-menu li{
+	border-bottom: 1px solid #62737c;
+}
+ul.custom-footer-menu li a {
+	color:   #ffffff;
+	padding: 12px 0px 12px 0px;
+	display: block;
+	text-decoration: none;
+}
+ul.custom-footer-menu li:first-child a {
+	padding: 0px 0px 12px 0px;
+}
+ul.custom-footer-menu li a:hover {
+	color:           #bed4df;
+	text-decoration: none;
+}
+
+/* 6.5 Recent Posts footer Menu
+==========================*/
+
+ul.recent-posts-footer {
+	list-style:  none;
+	margin-left: 0px;
+}
+ul.recent-posts-footer li{
+	border-bottom: 1px solid #62737c;
+	padding:       15px 0 15px 0;
+}
+ul.recent-posts-footer li:first-child {
+	padding: 0 0 15px 0;
+}
+ul.recent-posts-footer li:last-child {
+	border-bottom: none;
+}
+ul.recent-posts-footer li a {
+	color:   #ffffff;
+	display: block;
+	text-decoration: none;
+}
+ul.recent-posts-footer li a:hover {
+	color:           #bed4df;
+	text-decoration: none;
+}
+ul.recent-posts-footer li span.post-date {
+	color: #6a7d87;
+}
+
+/* 6.6 Footer Subscribe Widget
+==========================*/
+
+span.footer-subscribe-submit {
+	color:    #ffffff;
+	position: relative;
+	top:      -12px;
+	display:  none;
+}
+.footer-subscribe-widget input {
+	height:        47px;
+	max-width:     199px;
+	border-radius: 0px;
+	background:    #404345;
+	border:        0px;
+	color:         #afbbc1!important;
+	padding-left:  19px;
+	padding-right: 20px;
+	box-shadow:    none!important;
+}
+.footer-subscribe-widget input:focus {
+	background: #343638;
+}
+.footer-subscribe-widget button {
+	background: #191b1c;
+	border:     none;
+	color:      #404345;
+	padding:    8px 25px 7px 25px;
+	font-size:  25px;
+	position:   relative;
+	top:        -5px;
+	left:       -4px;
+}
+.footer-subscribe-widget button:hover {
+	background: #000000;
+}
+.footer-subscribe-wdiget input::-webkit-input-placeholder { color: #afbbc1; }
+.footer-subscribe-wdiget input:-moz-placeholder { color: #afbbc1; }
+.footer-subscribe-wdiget input::-moz-placeholder { color: #afbbc1; }
+.footer-subscribe-wdiget input:-ms-input-placeholder { color: #afbbc1; }
+
+/* ==========================================================================
+   7. Sidebar Widgets
+ ========================================================================== */
+
+#sidebar {
+	padding-top: 60px;
+}
+#sidebar .widget {
+	margin-right: 50px;
+	padding:      20px 0;
+}
+#sidebar .widget:first-child {
+	padding: 0;
+}
+#sidebar .widget h5 {
+	font-weight:    700;
+	color:          #323e4e;
+	padding-bottom: 12px;
+	border-bottom:  5px solid #dfdfdf;
+}
+
+/* 7.1 Download Widget
+==========================*/
+
+.download-widget {
+	border-bottom:  1px solid #cccccc;
+	padding-bottom: 10px;
+	margin-bottom:  10px;
+}
+.download-widget img {
+	float:   left;
+	padding: 5px 18px 22px 0;
+}
+.download-widget a {
+	color:         #000000;
+	font-size:     0.938em;
+	margin-bottom: 6px;
+	display:       inline-block;
+	text-decoration: none;
+}
+.download-widget a:hover {
+	text-decoration: underline;
+}
+.download-widget span.date,.download-widget span.size {
+	color:     #999999;
+	font-size: 0.875em;
+	display:   inline-block;
+	max-width: 158px;
+	float:     left;
+}
+/* 7.2 Twitter Widget
+==========================*/
+
+.twitter-widget ul {
+	margin-left: 0px;
+}
+.twitter-widget ul li {
+	margin-bottom: 30px;
+	background:    url("../img/tweet-icon.png") no-repeat left 5px;
+	list-style:    none;
+	padding-left:  50px;
+	font-size:     15px;
+}
+.twitter-widget ul li:last-child {
+	border-bottom:  1px solid #dfdfdf;
+	padding-bottom: 30px;
+}
+.twitter-widget ul li span {
+	color:      #aeaeae;
+	font-size:  12px;
+	margin-top: 10px;
+	display:    block;
+}
+
+/* 7.3 Sidebar Menu Widget
+==========================*/
+
+#sidebar .menu-widget ul {
+	margin: 0px;
+}
+#sidebar .menu-widget ul li { 
+	padding:    9px 0px;
+	list-style: none;
+	position:   relative; /*This is given to specify the position of the hover triangle*/
+}
+#sidebar .menu-widget ul li .icon-caret-right { /*This is the styling for the hover triangle*/
+	font-size: 50px;
+	color:     #ecebe9;
+	position:  absolute;
+	left:      -53px;
+	top:       -6px;
+}
+#sidebar .menu-widget ul li a {
+	font-size: 1.063em;
+	color:     #78a3b9;
+	text-decoration: none; 
+}
+#sidebar .menu-widget ul li a:hover {
+	color:           #000000;
+	text-decoration: none;
+}
+#sidebar .menu-widget ul li a.active {
+	color:           #000000;
+	text-decoration: none;
+}
+/* 7.4 Search Widget
+==========================*/
+
+.search-widget form{
+	position: relative;
+}
+.search-widget input {
+	height:        47px;
+	width:         100%;
+	border-radius: 0px;
+	background:    #ffffff;
+	border:        0px;
+	color:         #d6d3d3!important;
+	font-weight:   400;
+	font-size:     15px;
+	padding-left:  19px;
+	padding-right: 80px;
+	box-shadow:    none!important;
+	border:        1px solid #ecebe9;
+}
+.search-widget input:focus {
+	background: #ffffff;
+	box-shadow: none;
+	outline:    0;
+}
+.search-widget input:active {
+	background: #ffffff;
+	box-shadow: none;
+}
+.search-widget button {
+	background: #ecebe9;
+	border:     none;
+	color:      #ffffff;
+	padding:    10px 18px 10px 18px;
+	font-size:  20px;
+	position:   absolute;
+	top:        0px;
+	right:      0px;
+}
+.search-widget button:hover {
+	background: #dbdbdb;
+}
+.search-wdiget input::-webkit-input-placeholder { color: #d6d3d3; font-weight: 400; }
+.search-wdiget input:-moz-placeholder { color: #d6d3d3; font-weight: 400; }
+.search-wdiget input::-moz-placeholder { color: #d6d3d3; font-weight: 400; }
+.search-wdiget input:-ms-input-placeholder { color: #d6d3d3; font-weight: 400; }
+
+
+/* 7.5 Recent Posts Widget
+==========================*/
+
+.recent-posts .post-details{
+	padding:    20px;
+	background: #ecebe9;
+}
+.recent-posts .post-title {
+	font-size:     15px;
+	line-height:   1.5;
+	color:         #666666;
+	margin-bottom: 15px;
+	display:       block;
+	text-decoration: none;
+}
+.recent-posts .post-title:hover {
+	text-decoration: underline;
+}
+.recent-posts span.post-date {
+	font-size: 13px;
+	color:     #323e4e;
+}
+.recent-posts .carousel-control{
+	width:         auto;
+	height:        auto;
+	top:           -46px;
+	right:         0px;
+	left:          auto;
+	margin-top:    -20px;
+	font-size:     45px;
+	font-weight:   700;
+	color:         #e0deda;
+	text-align:    center;
+	background:    transparent;
+	border:        none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius:    0px;
+	border-radius: 0px;
+	opacity:       1;
+	filter: alpha(opacity=100);
+	text-decoration: none;
+}
+
+.recent-posts .carousel-control:hover{
+	color: #b1abab;
+}
+
+.recent-posts .carousel-control[data-slide="prev"]{
+	right: 18px;
+}
+
+/* 7.6 Recent Projects Widget
+==========================*/
+
+.recent-projects .project-details{
+	padding:    20px;
+	background: #aac8d7;
+}
+.recent-projects .project-title {
+	font-size:     18px;
+	line-height:   1.5;
+	color:         #ffffff;
+	margin-bottom: 15px;
+	display:       block;
+	text-decoration: none;
+}
+.recent-projects .project-title:hover {
+	text-decoration: underline;
+}
+.recent-projects span.project-category {
+	font-size: 13px;
+	color:     #323e4e;
+}
+.recent-projects .carousel-control{
+	width:         auto;
+	height:        auto;
+	top:           -46px;
+	right:         0px;
+	left:          auto;
+	margin-top:    -20px;
+	font-size:     45px;
+	font-weight:   700;
+	color:         #e0deda;
+	text-align:    center;
+	background:    transparent;
+	border:        none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius:    0px;
+	border-radius: 0px;
+	opacity:       1;
+	filter: alpha(opacity=100);
+	text-decoration: none;
+}
+
+.recent-projects .carousel-control:hover{
+	color: #b1abab;
+}
+
+.recent-projects .carousel-control[data-slide="prev"]{
+	right: 18px;
+}
+
+/* 7.7 Contact Widget
+==========================*/
+
+.contact-widget div {
+	position:      relative;
+	border-bottom: 1px solid #dfdfdf;
+
+}
+.contact-widget div p {
+	padding-left:  60px;
+	margin-top:    20px;
+	margin-bottom: 20px;
+}
+.contact-widget div i {
+	position:  absolute;
+	color:     #dfdfdf;
+	font-size: 30px;
+}
+/* 7.8 Info Box Widget
+==========================*/
+.info-box-widget {
+	margin-top:   40px;
+	margin-right: 0px!important;
+}
+
+/* 7.9 Text Widget
+==========================*/
+
+.info-box-widget {
+	margin-top:   20px;
+	margin-right: 0px!important;
+}
+.text-widget {
+	margin-right: 0px!important;
+}
+
+  /* ==========================================================================
+    8. Shortcodes Styles
+   ========================================================================== */
+
+/* 8.1 Medium Buttons Block */
+
+.med-buttons{
+	max-width: 175px;
+	float:     left;
+}
+.med-buttons a{
+	float:      left;
+	margin-top: 20px;
+}
+.med-buttons a:first-child{
+	margin-top: 0px;
+}
+
+/* 8.2 Small Buttons Block */
+
+.small-buttons{
+	max-width:   175px;
+	margin-left: 20px;
+	float:       left;
+}
+.small-buttons a{
+	float:      left;
+	margin-top: 28px;
+}
+.small-buttons a:first-child{
+	margin-top: 7px;
+}
+
+/* 8.3 cta-buttons block */
+
+.cta-buttons a{
+	margin-left: 28px;
+}
+
+.cta-buttons a:first-child{
+	margin-left: 0px;
+}
+
+  /* ==========================================================================
+    9. Portfolio Single Styles
+   ========================================================================== */
+
+.portfolio-container {
+	position: relative;
+}
+.portfolio-container #content{
+	padding-top: 366px;
+}
+.portfolio-featured {
+	position: absolute;
+	top:      -96px;
+	right:    0px;
+}
+.portfolio-featured img{
+	float: left;
+}
+.portfolio-featured .overlay {
+	position:   absolute;
+	max-width:  320px;
+	right:      0px;
+	top:        95px;
+	color:      #ffffff;
+	background: rgb(50, 62, 78);
+	background: rgba(50, 62, 78, 0.76);
+	min-height: 297px;
+	padding:    40px 30px;
+}
+.portfolio-featured h4{
+	color: #ffffff;
+}
+.portfolio-featured .portfolio-social-media {
+	position:   absolute;
+	right:      0px;
+	bottom:     -70px;
+	min-height: 70px;
+	background: #ececec;
+	max-width:  320px;
+	width:      100%;
+	cursor:     default;
+}
+.portfolio-social-media a{
+	color:       #b6b3b3;
+	font-size:   1.8em;
+	line-height: 70px;
+	margin-left: 30px; 
+	text-decoration: none;
+}
+.portfolio-social-media a:hover{
+	text-decoration: none;
+	color:           #1e1e1e;
+}
+.portfolio-container .portfolio-title{
+	position: relative;
+	top:      -25px;
+}
+
+
+  /* ==========================================================================
+     10. Portfolio Single Full Page Styles
+   ========================================================================== */
+
+.portfolio-large-featured {
+	margin-bottom: 60px;
+	overflow:      hidden;
+}
+.featured-intro{
+	background:    #fd3f6a;
+	max-width:     395px;
+	min-height:    428px;
+	margin-bottom: 3px;
+	color:         #ffffff; 
+	padding:       40px 30px;
+	position:      relative;
+}
+.featured-intro > i.icon-caret-right{
+	position:  absolute;
+	font-size: 47px;
+	left:      -3px;
+}
+.featured-intro p{
+	font-size: 1.875em;
+}
+.featured-details {
+	padding:    40px 30px 20px 30px;
+	background: #ecebe9;
+	max-width:  395px;
+}
+.featured-details p{
+	color:         #000000;
+	margin-bottom: 10px;
+}
+.featured-details p span{
+	color: #205e95;
+}
+.featured-left{
+	float: left;
+}
+.featured-right{
+	float: right;
+}
+.carousel {
+	margin-bottom: 0px;
+}
+.featured-slider .carousel-control {
+	background: transparent;
+	top:        50%;
+	border:     0px;
+	opacity:    1;
+	text-decoration: none;
+}
+.featured-slider .carousel-control:hover {
+	opacity: 0.7;
+}
+.featured-controls {
+	margin-top:    3px;
+	height:        46px;
+	background:    #ecebe9;
+	cursor:        default;
+	padding-right: 15px;
+}
+.featured-controls a{
+	color:       #b6b3b3;
+	font-size:   20px;
+	line-height: 46px;
+	margin-left: 15px;
+	text-decoration: none;
+
+}
+.featured-controls a:hover {
+	text-decoration: none;
+	color:           #000000;
+}
+
+  /* ==========================================================================
+     11. Blog Listing  Styles
+   ========================================================================== */
+
+.blog-listing {
+	padding-bottom: 20px;
+	border-bottom:  3px solid #ecebe9;
+}
+.blog-listing .post{
+	padding:       40px 0px 40px 0px;
+	border-bottom: 1px solid #e2e2e2;
+	position:      relative;
+}
+.blog-listing .post:first-child{
+	padding-top: 0px;
+}
+.blog-listing .post:last-child {
+	border: none;
+}
+.blog-listing span.date {
+	color:         #a2bcc9;
+	font-size:     1.188em;
+	margin-bottom: 5px;
+	display:       block;
+}
+.blog-listing h3 {
+	margin-bottom: 30px;
+}
+.blog-listing h3 a {
+	color: #000000;
+	text-decoration: none;
+}
+.blog-listing h3 a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+.blog-listing p {
+	color:     #666666;
+	font-size: 1.063em;
+}
+.blog-listing .tags {
+	float:    left;
+	position: relative;
+	top:      -2px;
+}
+.blog-listing .tags a {
+	color:     #323e4e;
+	font-size: 1.263em;
+	text-decoration: none;
+}
+.blog-listing .tags a:hover {
+	text-decoration: underline;
+}
+.blog-listing .read-more-btn {
+	float:        left;
+	margin-right: 50px;
+}
+.blog-listing span.more-text {
+	color:     #a2bcc9;
+	font-size: 1.188em;
+	display:   block;
+} 
+.blog-listing .post-footer {
+	position:  absolute;
+	bottom:    40px; 
+	max-width: 470px;
+	width:     100%;
+}
+
+  /* ==========================================================================
+     12. Blog Pagination Styles
+   ========================================================================== */
+.pagination {
+	cursor: default;
+}
+.pagination a {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color:       #cac7c2;
+	display:     inline-block;
+	font-size:   18px;
+	font-weight: 700;
+	padding:     7px 15px;
+	background:  #ecebe9;
+	text-decoration: none;
+}
+.pagination a.active {
+	background: #e2e0db;
+	color:      #ffffff;
+	cursor:     default;
+}
+.pagination a:hover{
+	text-decoration: none;
+	background:      #e2e0db;
+	color:           #ffffff;
+}
+
+  /* ==========================================================================
+     13. Blog Listing Alternative Styles
+   ========================================================================== */
+
+.blog-listing-alt {
+	border-bottom:  3px solid #ecebe9;
+	padding-bottom: 10px;
+}
+.blog-listing-alt .post {
+	background:    #f7f7f7;
+	padding:       30px 180px 30px 30px; 
+	margin-bottom: 10px;
+	position:      relative;
+}
+.blog-listing-alt .post p {
+	color:         #666666;
+	margin-bottom: 0px;
+}
+.blog-listing-alt .post span.date {
+	color:         #cac7c2;
+	padding-right: 5px;
+}
+.blog-listing-alt .post span.date:after {
+	content:      "|";
+	padding-left: 8px;
+}
+.blog-listing-alt .post a.tags {
+	color: #de3a31;
+}
+.blog-listing-alt .post i.icon-calendar-empty {
+	font-size:    32px;
+	color:        #cac7c2;
+	margin-right: 14px;
+}
+.blog-listing-alt .post h3 {
+	margin-top:    20px;
+	margin-bottom: 15px;
+}
+.blog-listing-alt .post h3 a {
+	color: #000000;
+	text-decoration: none;
+}
+.blog-listing-alt .post h3 a:hover {
+	text-decoration: underline;
+}
+.blog-listing-alt .post a.post-link {
+	display:    none;
+	position:   absolute;
+	right:      22px;
+	top:        50%;
+	font-size:  96px;
+	margin-top: -72px;
+	color:      #ecebe9;
+	text-decoration: none;
+}
+.blog-listing-alt .post:hover {
+	background: #ffffff;
+}
+.blog-listing-alt .post:hover a.post-link {
+	display: block;
+}
+.blog-listing-alt .post a.post-link:hover {
+	color:           #dcdcdc;
+	text-decoration: none;
+}
+
+
+  /* ==========================================================================
+     14. Gallery Styles
+   ========================================================================== */
+
+
+.gallery .img-large{
+	margin-top: 30px;
+	display:    none;
+	position:   relative;
+}
+.gallery .img-large a.cross{
+	position:   absolute;
+	cursor:     pointer;
+	top:        0px;
+	right:      0px;
+	color:      #ffffff;
+	font-size:  24px;
+	padding:    8px 18px 8px 18px;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.48);
+	text-decoration: none;
+}
+.gallery .img-large a.prev{
+	position:   absolute;
+	cursor:     pointer;
+	bottom:     0px;
+	right:      65px;
+	color:      #ffffff;
+	font-size:  24px;
+	padding:    8px 18px 6px 18px;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.48);
+	text-decoration: none;
+}
+.gallery .img-large a.next{
+	position:   absolute;
+	cursor:     pointer;
+	bottom:     0px;
+	right:      0px;
+	color:      #ffffff;
+	font-size:  24px;
+	padding:    8px 18px 6px 18px;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.48);
+	text-decoration: none;
+}
+.gallery .img-large a.cross:hover,.gallery .img-large a.prev:hover,.gallery .img-large a.next:hover{
+	background:      rgba(0, 0, 0, 0.68);
+	text-decoration: none;
+}
+.gallery .img-small {
+	margin-top: 27px;
+	display:    block;
+	opacity:    .63;
+  	filter:     alpha(opacity=63); 
+	cursor:     pointer;
+}
+.gallery .small-active {
+	opacity: 1!important;
+	filter:  alpha(opacity=100); 
+}
+.gallery .img-small:hover {
+	opacity: 1;
+	filter:  alpha(opacity=100); 
+}
+.gallery .img-small[data-id="1"],.gallery .img-small[data-id="2"],.gallery .img-small[data-id="3"] {
+	margin-top: 0px;
+}
+
+/* ==========================================================================
+    15. Single Post Styles
+   ========================================================================== */
+
+.blog-single .icon-calendar-empty {
+	color: #cac7c2;
+	font-size: 32px;
+}
+.blog-single span.date {
+	color:       #cac7c2;
+	font-weight: 700;
+	margin-left: 10px;
+}
+.blog-single h1.title {
+	margin: 20px 0px 40px 0px;
+}
+.blog-single .featured-image {
+	margin-bottom: 40px;
+}
+
+/* 15.1 Author Styles */
+
+.about-author {
+	border-top: 1px solid #e2e2e2;
+	border-bottom: 1px solid #e2e2e2;
+	padding: 35px 0px 30px 0px;	
+	margin: 40px 0;
+}
+.about-author p {
+	/*margin-bottom: 10px;*/
+}
+.about-author .author-social {
+	cursor: default;
+}
+.about-author .author-social a {
+	color:       #ecebe9;
+	font-size:   24px;
+	margin-left: 20px;
+	text-decoration: none;
+}
+.about-author .author-social a:first-child {
+	margin-left: 0px;
+}
+.about-author .author-social a:hover {
+	color: #dededd;
+	text-decoration: none;
+}
+
+/* 15.2 Comment Styles */
+
+ul.commentlist {
+	margin-top: 40px;
+}
+ul.commentlist li.comment {
+	list-style: none;
+/*	border-top: 1px solid #e2e2e2;
+	border-bottom: 1px solid #e2e2e2;*/
+}
+ul.commentlist .comment-body {
+	padding: 25px 0 10px 0;
+}
+.comment-body .avatar-wrap a.reply {
+	background:  #bbb7b0;
+	color:       #ffffff;
+	font-weight: 700;
+	display:     block;
+	font-size:   15px;
+	text-align:  center;
+	padding:     7px 0;
+	margin-top:  10px;
+	text-decoration: none;
+}
+.comment-body .avatar-wrap a.reply:hover {
+	background: #de3a31;
+	text-decoration: none;
+}
+.comment-body {
+	border-bottom: 1px solid #e2e2e2;
+}
+ul.children ul.children:last-child .comment-body { border: none; }
+ul.children ul.children:last-child {
+	border-bottom: 1px solid #e2e2e2;
+}
+.comment-area p{
+	font-size: 0.875em;
+	color:     #999999;
+}
+.comment-area h4.comment-author {
+	margin: 0px;
+}
+.comment-area p.comment-date {
+	margin-bottom: 10px;
+	font-size:     0.938em;
+}
+
+/* ==========================================================================
+    16. Comment Reply Styles
+   ========================================================================== */
+
+.comment-reply {
+	margin-top: 60px;
+}
+.comment-reply input:first-child {
+	margin-left: 0px;
+}
+.comment-reply input {
+	max-width:   266px;
+	margin-left: 30px;
+}
+.comment-form input:required{
+	background: url("../img/astrix.png") no-repeat 96% ;
+}
+.comment-reply form input{
+	height:        48px;
+	border-radius: 0px;
+	box-shadow:    none!important;
+	border:        2px solid #ecebe9;
+	font-size:     15px;
+	color: 		   #666666;
+	padding:       0 15px;
+}
+.comment-reply form input:focus{
+	border-color: #dfdfdf!important;
+} 
+.comment-reply form textarea {
+	border-radius: 0px;
+	box-shadow:    none;
+	border:  	   2px solid #ecebe9;
+	font-size:     15px;
+	color:         #666666;
+	padding:       15px 15px;
+	width:         100%;
+	max-width:     870px;
+	margin-top:    20px;
+	margin-bottom: 25px;
+}
+.comment-reply form button {
+	margin-top: 7px;
+}
+.comment-info {
+	font-size: 15px;
+	color:     #b4b3b1;
+}
+
+  /* ==========================================================================
+     17. Home v1 Styles
+   ========================================================================== */
+
+/* 17.1 HOME v1 SLIDER STYLES */
+
+
+.home-v1-featured-slider .slide-content {
+	position: relative;
+}
+.home-v1-featured-slider .slide-content .slide-text {
+	padding-left: 60px;
+	position:     absolute;
+	top:          50%;
+}
+.home-v1-featured-slider .slide-content .slide-text h1 {
+	font-size: 2.500em;
+}
+
+.home-v1-featured-slider .slide-content .slide-text * {
+	color:      #ffffff;
+	background: rgba(45, 45, 45);
+	background: rgba(45, 45, 45, 0.78);
+	display:    inline-block;
+	clear:      left;
+	float:      left;
+	padding:    10px 20px 10px 20px;
+	margin-bottom: 7px!important;
+}
+.home-v1-featured-slider .carousel-control {
+	position:        absolute;
+	top:             84%;
+	left:            60px;
+	width:           45px;
+	height:          45px;
+	margin-top:      -20px;
+	font-size:       50px;
+	font-weight:     100;
+	line-height:     43px;
+	color: 		     #fff;
+	text-align:      center;
+	text-decoration: none;
+	background:      rgba(45, 45, 45);
+	background:      rgba(45, 45, 45, 0.78);
+	border:          none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius:   5px;
+	opacity:         1;
+	filter: alpha(opacity=100);
+}
+.home-v1-featured-slider .carousel-control.right {
+	left: 120px;
+}
+.home-v1-featured-slider a.carousel-control:hover {
+	background: rgb(222, 58, 49); 
+	background: rgba(222, 58, 49, 0.78);
+}
+.featured-box {
+	position:      relative;
+	margin-bottom: 26px;
+}
+.featured-box a:hover .featured-box-hover {
+	opacity: 1;
+	filter:  alpha(opacity=100); 
+}
+.featured-box .featured-box-hover {
+	opacity:    0;
+	filter:     alpha(opacity=0); 
+	position:   absolute;
+	height:     100%;
+	width:      100%;
+	bottom:     0px;
+	left:       0px;
+	background: rgb(50, 62, 78);
+	background: rgba(50, 62, 78, 0.83);
+	color:      #ffffff!important;
+	padding:    34% 80px 0px 30px;
+}
+.featured-box-hover i.icon-align-justify {
+	font-size: 30px;
+}
+.featured-box-hover p {
+	font-size:   18px;
+	font-weight: 700;
+	line-height: 1.3;
+	margin-top:  8px;
+}
+
+  /* ==========================================================================
+     18. Home v2 Styles
+   ========================================================================== */
+
+
+/* 18.1 HOME v1 SLIDER STYLES */
+
+.home-v2-featured-slider {
+	margin-left: 30px;
+}
+
+.home-v2-featured-slider .carousel-control {
+	position:      absolute;
+	top:           84%;
+	left:          60px;
+	width:         45px;
+	height:        45px;
+	margin-top:    -20px;
+	font-size:     50px;
+	font-weight:   100;
+	line-height:   43px;
+	color:         #fff;
+	text-align:    center;
+	background:    rgba(45, 45, 45);
+	background:    rgba(45, 45, 45, 0.88);
+	border:        none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	opacity:       1;
+	filter: alpha(opacity=100);
+	text-decoration: none;
+}
+
+.home-v2-featured-slider .slide-content .slide-text {
+	padding-left: 60px;
+	position:     absolute;
+	top:          60%;
+}
+
+.home-v2-featured-slider .slide-content .slide-text h1 {
+	font-size: 2.500em;
+}
+
+.home-v2-featured-slider .slide-content .slide-text * {
+	color:         #ffffff;
+	background:    rgba(45, 45, 45);
+	background:    rgba(45, 45, 45, 0.88);
+	display:       inline-block;
+	clear:         left;
+	float:         left;
+	padding:       10px 20px 10px 20px;
+	margin-bottom: 7px!important;
+}
+.home-v2-featured-slider .carousel-control.right {
+	left: 120px;
+}
+.home-v2-featured-slider a.carousel-control:hover {	
+	background: rgb(222, 58, 49); 
+	background: rgba(222, 58, 49, 0.88);
+}
+
+  /* ==========================================================================
+     19. Contact Page Styles
+   ========================================================================== */
+
+
+/* 19.1 Contact Form Styles */
+
+form.contact-form .control-label{
+	text-align:  left;
+	font-size:   1.125em;
+	line-height: 48px;
+	padding:     0px;
+	margin:      0px;
+}
+form.contact-form input{
+	height:        48px;
+	border-radius: 0px;
+	box-shadow:    none!important;
+	border:        2px solid #ecebe9;
+	font-size:     15px;
+	color:         #666666;
+}
+form.contact-form p.success {	
+	color:   #2aa117;
+	display: none;
+}
+form.contact-form input:required{
+	background: url("../img/astrix.png") no-repeat 96% ;
+}
+form.contact-form input:focus{
+	border-color: #dfdfdf!important;
+}
+form.contact-form textarea:focus{
+	border-color: #dfdfdf!important;
+}
+form.contact-form textarea {
+	border-radius: 0px;
+	box-shadow:    none!important;
+	border:        2px solid #ecebe9;
+	font-size:     15px;
+	color:         #666666;
+	padding:       15px 8px;
+}
+form.contact-form button[type="submit"] {
+	margin-right: 34px;
+}
+#google-map {
+	height: 330px;
+}
+#google-map img{
+	max-width:none;
+}
+
+/* ==========================================================================
+   20. Service Styles
+ ========================================================================== */
+ 
+
+.service-slider .carousel-control {
+	position:     absolute;
+	top:          93%;
+	left:         15px;
+	width:        30px;
+	height:       30px;
+	margin-top:   -20px;
+	font-size:    41px;
+	font-weight:  100;
+	line-height:  28px;
+	color:        #fff;
+	text-align:   center;
+	background:   #222;
+	border:       none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	opacity:      .43;
+	filter: alpha(opacity=43);
+	text-decoration: none;
+}
+.service-slider .carousel-control.right {
+	left: 50px;
+}
+.service-slider .carousel-control:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+/* ==========================================================================
+   21. Media Queries
+ ========================================================================== */
+ 
+@media only screen and (min-width: 980px) and (max-width: 1200px) {
+
+	.footer-subscribe-widget input{ max-width: 149px; }
+	.portfolio-featured { top: -112px; max-width: 770px; }
+	.portfolio-container #content { padding-top: 276px; }
+	.portfolio-container .portfolio-title{ top: 0px; }
+	.portfolio-featured .overlay { min-height: 318px; top: 0px; }
+	.featured-intro{ max-width: 273px; min-height: 347px; padding: 30px; }
+	.featured-intro>i.icon-caret-right{ top:24px; }
+	.featured-slider{ max-width: 664px; }
+	.featured-intro p { font-size: 1.39em; }
+	.featured-box .featured-box-hover { padding: 13% 80px 0px 30px; }
+	.home-v1-featured-slider .slide-content .slide-text { top: 36%; }
+	.home-v2-featured-slider .slide-content .slide-text { top: 54%; }
+} 
+/* Higher than 960 (desktop devices) */
+@media only screen and (min-width: 980px) {
+
+	#mobile-navigation{ display: none!important; }
+
+}
+
+/* Higher than 960 (desktop devices) */
+@media only screen and (max-width: 1200px) {
+
+	.project-box i{ display: none; }
+	.project-box h4 { padding-right: 10px; }
+	.project-box p { padding-right: 10px; }
+	.blue-hero-box .title { display: inherit; float: none; text-align: center; }
+	.blue-hero-box .subtitle { margin-bottom: 10px; float: none; display: inherit; text-align: center; }
+	.blue-hero-box a { margin-left: 0px; display: table; margin: 0 auto; }
+	.blue-hero-box { padding: 40px 50px 40px 50px; }
+	ul.horizontal-tabs li { float: none; text-align: center; }
+	.med-buttons { margin-bottom: 30px; }
+	.blog-listing .post-footer { position: inherit; bottom: 0px; }
+	.blog-listing .read-more-btn { margin-bottom: 10px; }
+	.subscribe-box form .med-btn { padding: 12px 26px; font-size: 1.25em; }
+	.comment-reply input { margin-left: 0px; display: block; max-width: 100%; width: 100%; }
+	.subscribe-box { text-align: center; overflow: hidden; }
+	.subscribe-box form input {margin-left: 0px; margin-top: 10px; max-width: inherit; width: 100%;}
+	.subscribe-box form .med-btn {margin-top: 10px; margin-left: 0px; margin-bottom: 20px; width: 100%; display: block;}
+	
+	.page-heading-container .portfolio-controls { top: 0px; }
+	.page-heading-container .portfolio-controls a { font-size:  22px; }
+}
+
+
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 979px) {
+
+	a.nav-toggle{ display: block; }
+	nav#navigation{ display: none; }
+	.home-v1-featured-slider .carousel-control.right { left: 71px; }
+	.home-v1-featured-slider .slide-content .slide-text h1 { font-size: 1.5em; }
+	.home-v1-featured-slider .slide-content .slide-text h4 { font-size: 1em; }
+	.home-v1-featured-slider .slide-content .slide-text { padding-left: 15px; top:28%; }
+	.home-v1-featured-slider .carousel-control { top: 84%; left: 18px; }
+
+}
+
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+
+	.footer-subscribe-widget input{ max-width: 95px!important; }
+	.portfolio-featured { top: -112px; max-width: 608px; }
+	.portfolio-featured .overlay { top: 0px; min-height: 260px; }
+	.portfolio-container #content { padding-top: 209px; }
+	.portfolio-container .portfolio-title{ top: 0px; }
+	.featured-details { width: 326px; float: right; min-height: 428px; }
+	.featured-intro{ float: left; }
+	.featured-box .featured-box-hover { padding: 8% 10px 0px 19px; }
+	.service-icon i {font-size: 50px;}
+	.subscribe-box { text-align: center; overflow: hidden; }
+	.subscribe-box form input {margin-left: 0px; margin-top: 10px; max-width: inherit; width: 100%;}
+	.subscribe-box form .med-btn {margin-top: 10px; margin-left: 0px; margin-bottom: 20px; width: 100%; display: block;}
+	.home-v2-featured-slider .slide-content .slide-text { top: 44%; }
+
+}
+
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
+	#wrapper>.container {padding: 0 30px;}
+	.social-title { display: none;}
+	.featured-box { display: table; margin: 0 auto; margin-top: 20px; }
+	#content,#sidebar { ;padding-right:0; }
+	.featured-details { padding-top: 20px; max-width: 100%; }
+	.featured-intro   { max-width: 100%; }
+	.portfolio-large-featured>.pull-left,.portfolio-large-featured>.pull-right{ float: none; }
+	.service-icon i {padding-right: 30px;}
+	.project-box { display: table; margin: 0 auto; margin-top: 20px; }
+	.inner-footer .span3{  margin-top: 40px; }
+	.info-box { margin-bottom: 20px; }
+	.service-box { margin-bottom: 20px; }
+	.service-box img { display: table; margin: 0 auto; }
+	.service-box .service-text { text-align: center; border: none; }
+	.service-box:hover { background:#ffffff;  }
+	.service-box:hover i { display: none; }
+	.med-buttons { display: table; margin: 0 auto; float: none; }
+	.small-buttons { max-width: 124px; display: table; margin: 0 auto; float: none; margin-top: 20px; }
+	.blog-listing { text-align: center; }
+	.blog-listing img { display: table; margin: 0 auto; margin-bottom: 20px; }
+	.blog-listing a.read-more-btn { display: table; margin: 0 auto; float: none; margin-bottom: 10px; }
+	.blog-listing .post .post-footer { max-width: 100%!important; }
+	.blog-listing .post .tags { float: none; }
+	.blog-listing-alt .post {padding-right: 30px; }
+	.blog-listing-alt .post i.icon-chevron-right { display: none; }
+	.comment-body .avatar-wrap a.reply { display:  inline-block; padding-right: 5px; padding-left: 5px; }
+	#sidebar .widget {margin-right: 50px;}
+	.recent-posts img { display: table; margin: 0 auto; }
+	.recent-projects img { display: table; margin: 0 auto; }
+	.recent-posts .post-details { display: table; margin: 0 auto; max-width: 260px; }
+	.recent-projects .post-details { display: table; margin: 0 auto; max-width: 260px; }
+	.download-widget span.date, .download-widget span.size {max-width: 100%; float: none; display: block; }
+	.download-widget a { display: block;}
+	.box-padding-both , .box-padding-right , .box-padding-left { padding: 0; }
+	.header-container , .inner-footer {padding:0 30px;}
+	#sidebar {padding-left: 30px;}
+	.page-heading-container {padding: 0 30px;}
+	.subscribe-box { text-align: center; overflow: hidden; }
+	.subscribe-box form input {margin-left: 0px; margin-top: 10px; max-width: inherit; width: 100%;}
+	.subscribe-box form .med-btn {margin-top: 10px; margin-left: 0px; margin-bottom: 20px; width: 100%; display: block;}
+	.portfolio-featured { overflow: hidden; }
+	.portfolio-featured .overlay {top: 0px;}
+	.portfolio-container { padding-top: 240px!important; }
+	.portfolio-container #content { padding-top: 50px; }
+	.home-v2-featured-slider .slide-content .slide-text{ display: none;}
+	.home-v2-featured-slider {margin-top: 30px;}
+}
+		
+	
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
+}
+
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+
+.home-v1-featured-slider .slide-content .slide-text { display: none;}
+}
+
+
+/*HTML FIXES*/
+
+html {-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
+
+a:focus {outline: thin dotted;}
+
+a:active, a:hover {outline: 0;}
+
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b,strong {font-weight: bold;}
+
+dfn {font-style: italic;}
+
+hr {-moz-box-sizing: content-box;box-sizing: content-box;height: 0;}
+
+mark {background: #ff0;color: #000;}
+
+code,kbd,pre,samp {font-family: monospace, serif;font-size: 1em;}
+
+pre {white-space: pre-wrap;}
+
+q {quotes: "\201C" "\201D" "\2018" "\2019";}
+
+small {font-size: 80%;}
+
+sub,sup {font-size: 75%;line-height: 0;position: relative;vertical-align: baseline;}
+
+sup {top: -0.5em;}
+
+sub {bottom: -0.25em;}
+
+img {border: 0;}
+
+svg:not(:root) {overflow: hidden;}
+
+figure {margin: 0;}
+
+fieldset {border: 1px solid silver;margin: 0 2px;padding: 0.35em 0.625em 0.75em;}
+
+legend {border: 0;/* 1 */padding: 0;/* 2 */}
+
+button,input,select,textarea {font-family: inherit;font-size: 100%;margin: 0;}
+
+button,input {line-height: normal;}
+
+button,select {text-transform: none;}
+
+button,html input[type="button"],input[type="reset"],input[type="submit"] {-webkit-appearance: button;cursor: pointer;}
+
+button[disabled],html input[disabled] {cursor: default;}
+
+input[type="checkbox"],input[type="radio"] {box-sizing: border-box;padding: 0;}
+
+input[type="search"] {-webkit-appearance: textfield;-moz-box-sizing: content-box;-webkit-box-sizing: content-box;box-sizing: content-box;}
+
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
+
+button::-moz-focus-inner,input::-moz-focus-inner {border: 0;padding: 0;}
+
+textarea {overflow: auto;vertical-align: top;}
+
+table {border-collapse: collapse;border-spacing: 0;}
+ 
