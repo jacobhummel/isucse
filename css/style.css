@@ -9,10 +9,6 @@
     Importing Required Css Files
   ========================================================================== */
   
-
-
- @import url('bootstrap.min.css');
- @import url('bootstrap-responsive.min.css');
  @import url('shortcodes.css');
  
  /***
@@ -350,11 +346,9 @@ ul.arrow li {
 	/*border-bottom: 4px solid #bed4df;*/
 
 	background-color: #cb1a2a;
-	background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.28));
-	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.28)));
 	background-position: bottom center;
 	background-repeat: repeat-x;
-	border-bottom: 6px solid #dfbd00;
+	border-bottom: 4px solid #ffcc00;
 }
 
 
@@ -413,12 +407,12 @@ ul.arrow li {
 }
 #navigation ul li:hover > a {
 	color: white;
-	background-color: #cb1a2a;
+	background-color: #b41725;
 }
 
 .nav-active 
 {
-	background-color: #cb1a2a;
+	background-color: #b41725;
 }
 
 #navigation .nav-top-icon {
@@ -516,14 +510,12 @@ a.nav-toggle {
 	border-radius:  5px;
 	text-decoration: none;
 
-	background-color: #cb1a2a;
-	background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.1));
-	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.1)));
+	background-color: #b41725;
 	background-position: bottom center;
 	background-repeat: repeat-x;
 }
 a.nav-toggle:hover {
-	background:      #cb1a2a;
+	background: #9e1421;
 	text-decoration: none;
 }
 #mobile-navigation {
@@ -570,7 +562,7 @@ a.nav-toggle:hover {
 	position: absolute;
 	margin-top: -70px;
 	font-size: 72px;
-	font-family: helvetica, arial, sans-serif;
+	font-family: 'Helvetica Neue', sans-serif;
 }
 
 .page-heading-container {
@@ -1235,6 +1227,10 @@ span.footer-subscribe-submit {
   /* ==========================================================================
     9. Portfolio Single Styles
    ========================================================================== */
+
+.officerRow img {
+
+}
 
 .portfolio-container {
 	position: relative;
@@ -2069,7 +2065,8 @@ form.contact-form button[type="submit"] {
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
-
+	#mobile-navigation { padding-top: 30px; }
+	.officerRow { display: none; }
 	#wrapper>.container {padding: 0 30px;}
 	.social-title { display: none;}
 	.featured-box { display: table; margin: 0 auto; margin-top: 20px; }
@@ -2197,4 +2194,5 @@ button::-moz-focus-inner,input::-moz-focus-inner {border: 0;padding: 0;}
 textarea {overflow: auto;vertical-align: top;}
 
 table {border-collapse: collapse;border-spacing: 0;}
+
  
